@@ -1,0 +1,6 @@
+framework module TCBFreshchatBotWidget {
+  umbrella header "TCBFreshchatBotWidget-umbrella.h"
+
+  export *
+  module * { export * }
+}

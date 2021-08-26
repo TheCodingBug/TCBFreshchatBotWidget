@@ -1,0 +1,16 @@
+PODS:
+  - TCBFreshchatBotWidget (0.1.0)
+
+DEPENDENCIES:
+  - TCBFreshchatBotWidget (from `../`)
+
+EXTERNAL SOURCES:
+  TCBFreshchatBotWidget:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  TCBFreshchatBotWidget: ded337fdd9cdedcd53f2ed30423f701e9d192905
+
+PODFILE CHECKSUM: db3c20f0a23670270ed54a5300b5c9bb21661f53
+
+COCOAPODS: 1.10.1
