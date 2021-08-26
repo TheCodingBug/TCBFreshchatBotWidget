@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import WebKit
 
-class TCBFreshchatBotWidgetView: UIView {
+public class TCBFreshchatBotWidgetView: UIView {
     
     private lazy var jScript: String = {
         // add sizing
@@ -29,11 +29,11 @@ class TCBFreshchatBotWidgetView: UIView {
     private lazy var welcomeHTML: String = {
         var htmlString = "<html>"
         htmlString += "<body>"
-        htmlString += "<h3>Hello from TCBFreshchatBotWidget</h3>"
+        htmlString += "<h1>Hello from TCBFreshchatBotWidget</h1>"
         htmlString += "<br /><br />"
-        htmlString += "GitHub: <a href='https://github.com/TheCodingBug/TCBFreshchatBotWidget'>TCBFreshchatBotWidget</a>"
+        htmlString += "<h3>GitHub: <a href='https://github.com/TheCodingBug/TCBFreshchatBotWidget'>TCBFreshchatBotWidget</a></h3>"
         htmlString += "<br />"
-        htmlString += "License: <a href='https://github.com/TheCodingBug/TCBFreshchatBotWidget/blob/main/LICENSE'>MIT License</a>"
+        htmlString += "<h3>License: <a href='https://github.com/TheCodingBug/TCBFreshchatBotWidget/blob/main/LICENSE'>MIT License</a></h3>"
         htmlString += "</body>"
         htmlString += "</html>"
         
@@ -51,10 +51,10 @@ class TCBFreshchatBotWidgetView: UIView {
     
     private var wkWebView: WKWebView!
     
-    var uiDelegate: WKUIDelegate?
-    var navigationDelegate: WKNavigationDelegate?
+    @IBOutlet public var uiDelegate: WKUIDelegate?
+    @IBOutlet public var navigationDelegate: WKNavigationDelegate?
     
-    override func awakeFromNib() {
+    public override func awakeFromNib() {
         super.awakeFromNib()
         
         prepareWKWebView()
@@ -74,6 +74,9 @@ class TCBFreshchatBotWidgetView: UIView {
         addSubview(wkWV)
         pinViewToView(wkWV, to: self)
         wkWebView = wkWV
+        
+        let githubURL = URL(string: "https://github.com/TheCodingBug/TCBFreshchatBotWidget")
+        loadHTMLString(htmlString: welcomeHTML, baseURL: githubURL)
     }
     
     private func pinViewToView(_ view: UIView, to: UIView) {
@@ -93,22 +96,22 @@ class TCBFreshchatBotWidgetView: UIView {
 
 extension TCBFreshchatBotWidgetView {
     
-    func loadRequest(request: URLRequest) {
+    public func loadRequest(request: URLRequest) {
         
         wkWebView.load(request)
     }
     
-    func loadHTMLString(htmlString: String, baseURL: URL?) {
+    public func loadHTMLString(htmlString: String, baseURL: URL?) {
         
         wkWebView.loadHTMLString(htmlString, baseURL: baseURL)
     }
     
-    func loadFileURL(fileURL: URL, allowingReadAccessTo allowAccessToURL: URL) {
+    public func loadFileURL(fileURL: URL, allowingReadAccessTo allowAccessToURL: URL) {
         
         wkWebView.loadFileURL(fileURL, allowingReadAccessTo: allowAccessToURL)
     }
     
-    func load(data: Data, mimeType: String, characterEncodingName encoding: String, baseURL: URL) {
+    public func load(data: Data, mimeType: String, characterEncodingName encoding: String, baseURL: URL) {
         
         wkWebView.load(data, mimeType: mimeType, characterEncodingName: encoding, baseURL: baseURL)
     }
@@ -116,7 +119,7 @@ extension TCBFreshchatBotWidgetView {
 
 extension TCBFreshchatBotWidgetView {
     
-    func loadWidget(withWidgetData widgetData: TCBFreshchatBotWidget) {
+    public func loadWidget(withWidgetData widgetData: TCBFreshchatBotWidget) {
         widgetData.createWidgetFile()
         
         if let fileURL = widgetData.loadWidgetFileURL() {

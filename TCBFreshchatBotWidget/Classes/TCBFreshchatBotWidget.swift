@@ -7,13 +7,13 @@
 
 import Foundation
 
-class TCBFreshchatBotWidget: NSObject {
+open class TCBFreshchatBotWidget: NSObject {
 
     private var clientHash: String = "CLIENT_HASH"
     private var botHash: String = "CLIENT_BOT_HASH"
     private var clientData: [String: Any]?
     
-    var debugLogging: Bool = true
+    public var debugLogging: Bool = true
     
     private
     override init() {
@@ -47,7 +47,7 @@ extension TCBFreshchatBotWidget {
 
 extension TCBFreshchatBotWidget {
     
-    func createWidgetFile() {
+    public func createWidgetFile() {
         let fileName = "TCBFreshchatBotWidget.html"
         
         do {
@@ -61,7 +61,7 @@ extension TCBFreshchatBotWidget {
         }
     }
     
-    func loadWidgetFileURL() -> URL? {
+    public func loadWidgetFileURL() -> URL? {
         let fileName = "TCBFreshchatBotWidget.html"
         
         do {
