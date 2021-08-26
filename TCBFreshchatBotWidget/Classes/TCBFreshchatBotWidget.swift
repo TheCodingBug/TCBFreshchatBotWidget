@@ -11,25 +11,40 @@ open class TCBFreshchatBotWidget: NSObject {
 
     private var clientHash: String = "CLIENT_HASH"
     private var botHash: String = "CLIENT_BOT_HASH"
+    private var autoInitChat: Bool = false
+    private var showWidget: Bool = false
     private var clientData: [String: Any]?
     
     public var debugLogging: Bool = true
+    public var environment: String = "prod"
+    public var cdnServer: String = "https://cdn.freshbots.ai/assets/share/js/freshbots.min.js"
+    public var region: String = "us"
     
     private
     override init() {
         super.init()
     }
     
-    convenience init(withClientHash cHash: String, botHash bHash: String, clientData cData: [String: Any]? = ["name": "TCBFreshchatBotWidget"]) {
+    public convenience init(withClientHash cHash: String, botHash bHash: String, autoInitChat autoInit: Bool = false, showWidget showW: Bool = false, clientData cData: [String: Any]? = ["name": "TCBFreshchatBotWidget"]) {
         self.init()
         
         clientHash = cHash
         botHash = bHash
+        autoInitChat = autoInit
+        showWidget = showW
         clientData = cData
     }
 }
 
 extension TCBFreshchatBotWidget {
+    
+    private var autoInitChatValue: String {
+        return autoInitChat ? "true" : "false"
+    }
+    
+    private var showWidgetValue: String {
+        return showWidget ? "true" : "false"
+    }
     
     private var clientDataJSONString: String {
         guard let clientData = clientData,
@@ -39,7 +54,7 @@ extension TCBFreshchatBotWidget {
     }
     
     private var jScriptWidget: String {
-        let jScriptWidget = "<script> (function (d, w, c) { if(!d.getElementById('spd-busns-spt')) { var n = d.getElementsByTagName('script')[0], s = d.createElement('script'); var loaded = false; s.id = 'spd-busns-spt'; s.async = 'async'; s.setAttribute('data-self-init', 'false'); s.setAttribute('data-init-type', 'opt'); s.src = 'https://cdn.freshbots.ai/assets/share/js/freshbots.min.js'; s.setAttribute('data-client', '\(clientHash)'); s.setAttribute('data-bot-hash', '\(botHash)'); s.setAttribute('data-env', 'prod'); s.setAttribute('data-region', 'us'); if (c) { s.onreadystatechange = s.onload = function () { if (!loaded) { c(); } loaded = true; }; } n.parentNode.insertBefore(s, n); } }) (document, window, function () { Freshbots.initiateWidget({ autoInitChat: true, getClientParams: function () { return \(clientDataJSONString); } }, function(successResponse) { Freshbots.showWidget(true); }, function(errorResponse) { Freshbots.showWidget(true); }); }); </script>"
+        let jScriptWidget = "<script> (function (d, w, c) { if(!d.getElementById('spd-busns-spt')) { var n = d.getElementsByTagName('script')[0], s = d.createElement('script'); var loaded = false; s.id = 'spd-busns-spt'; s.async = 'async'; s.setAttribute('data-self-init', 'false'); s.setAttribute('data-init-type', 'opt'); s.src = '\(cdnServer)'; s.setAttribute('data-client', '\(clientHash)'); s.setAttribute('data-bot-hash', '\(botHash)'); s.setAttribute('data-env', '\(environment)'); s.setAttribute('data-region', '\(region)'); if (c) { s.onreadystatechange = s.onload = function () { if (!loaded) { c(); } loaded = true; }; } n.parentNode.insertBefore(s, n); } }) (document, window, function () { Freshbots.initiateWidget({ autoInitChat: \(autoInitChatValue), getClientParams: function () { return \(clientDataJSONString); } }, function(successResponse) { Freshbots.showWidget(\(showWidgetValue)); }, function(errorResponse) { Freshbots.showWidget(\(showWidgetValue)); }); }); </script>"
         
         return jScriptWidget
     }
@@ -54,6 +69,8 @@ extension TCBFreshchatBotWidget {
             var fileURL = try FileManager.default.url(for: .developerDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             fileURL.appendPathComponent(fileName)
             try jScriptWidget.write(to: fileURL, atomically: true, encoding: .utf8)
+            
+            print("\n\njScriptWidget: \(jScriptWidget)\n\n")
             
             if debugLogging { print("TCBFreshchatBotWidget:: Resource created") }
         } catch {
