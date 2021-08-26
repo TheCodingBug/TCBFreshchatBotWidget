@@ -62,24 +62,26 @@ extension TCBFreshchatBotWidget {
 
 extension TCBFreshchatBotWidget {
     
-    public func createWidgetFile() {
+    public func createWidgetFile(in directory: FileManager.SearchPathDirectory = .cachesDirectory, inDomain domain: FileManager.SearchPathDomainMask = .userDomainMask) {
         let fileName = "TCBFreshchatBotWidget.html"
         
         do {
-            var fileURL = try FileManager.default.url(for: .developerDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            var fileURL = try FileManager.default.url(for: directory, in: domain, appropriateFor: nil, create: true)
             fileURL.appendPathComponent(fileName)
+            
             try jScriptWidget.write(to: fileURL, atomically: true, encoding: .utf8)
+            
             if debugLogging { print("TCBFreshchatBotWidget:: Resource created") }
         } catch {
             if debugLogging { print("TCBFreshchatBotWidget:: Could not create resource") }
         }
     }
     
-    public func loadWidgetFileURL() -> URL? {
+    public func loadWidgetFileURL(in directory: FileManager.SearchPathDirectory = .cachesDirectory, inDomain domain: FileManager.SearchPathDomainMask = .userDomainMask) -> URL? {
         let fileName = "TCBFreshchatBotWidget.html"
         
         do {
-            var fileURL = try FileManager.default.url(for: .developerDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
+            var fileURL = try FileManager.default.url(for: directory, in: domain, appropriateFor: nil, create: true)
             fileURL.appendPathComponent(fileName)
             
             if debugLogging { print("TCBFreshchatBotWidget:: Resource loaded") }
