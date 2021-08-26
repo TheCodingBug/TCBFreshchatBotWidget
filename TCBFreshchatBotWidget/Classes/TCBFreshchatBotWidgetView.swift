@@ -119,14 +119,14 @@ extension TCBFreshchatBotWidgetView {
 
 extension TCBFreshchatBotWidgetView {
     
-    public func loadWidget(withWidgetData widgetData: TCBFreshchatBotWidget) {
-        widgetData.createWidgetFile()
+    public func loadWidget(withBotWidget widget: TCBFreshchatBotWidget, in directory: FileManager.SearchPathDirectory = .cachesDirectory, inDomain domain: FileManager.SearchPathDomainMask = .userDomainMask) {
+        widget.createWidgetFile(in: directory, inDomain: domain)
         
-        if let fileURL = widgetData.loadWidgetFileURL() {
+        if let fileURL = widget.loadWidgetFileURL(in: directory, inDomain: domain) {
             loadFileURL(fileURL: fileURL, allowingReadAccessTo: fileURL)
-            if widgetData.debugLogging { print("TCBFreshchatBotWidgetView:: Resource file loaded") }
+            if widget.debugLogging { print("TCBFreshchatBotWidgetView:: Resource file loaded") }
         }else{
-            if widgetData.debugLogging { print("TCBFreshchatBotWidgetView:: Could not load resource file") }
+            if widget.debugLogging { print("TCBFreshchatBotWidgetView:: Could not load resource file") }
         }
     }
 }
