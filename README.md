@@ -41,7 +41,7 @@ TCBFreshchatBotWidget is available through [CocoaPods](https://cocoapods.org). T
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'TCBFreshchatBotWidget'
+pod 'TCBFreshchatBotWidget', git: => 'https://github.com/TheCodingBug/TCBFreshchatBotWidget.git'
 ```
 
 ## Author
