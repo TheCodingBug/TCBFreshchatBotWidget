@@ -25,7 +25,7 @@ open class TCBFreshchatBotWidget: NSObject {
         super.init()
     }
     
-    public convenience init(withClientHash cHash: String, botHash bHash: String, autoInitChat autoInit: Bool = false, showWidget showW: Bool = false, clientData cData: [String: Any]? = ["name": "TCBFreshchatBotWidget"]) {
+    public convenience init(clientHash cHash: String, botHash bHash: String, autoInitChat autoInit: Bool = false, showWidget showW: Bool = false, clientData cData: [String: Any]? = ["name": "TCBFreshchatBotWidget"]) {
         self.init()
         
         clientHash = cHash
@@ -69,9 +69,6 @@ extension TCBFreshchatBotWidget {
             var fileURL = try FileManager.default.url(for: .developerDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             fileURL.appendPathComponent(fileName)
             try jScriptWidget.write(to: fileURL, atomically: true, encoding: .utf8)
-            
-            print("\n\njScriptWidget: \(jScriptWidget)\n\n")
-            
             if debugLogging { print("TCBFreshchatBotWidget:: Resource created") }
         } catch {
             if debugLogging { print("TCBFreshchatBotWidget:: Could not create resource") }
