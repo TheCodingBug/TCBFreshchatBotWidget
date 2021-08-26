@@ -1,7 +1,6 @@
 # TCBFreshchatBotWidget
-<<<<<<< HEAD
 
-[![CI Status](https://img.shields.io/travis/Neil Francis Ramirez Hipona/TCBFreshchatBotWidget.svg?style=flat)](https://travis-ci.org/Neil Francis Ramirez Hipona/TCBFreshchatBotWidget)
+[![CI Status](https://img.shields.io/travis/TheCodingBug/TCBFreshchatBotWidget.svg?style=flat)](https://travis-ci.org/TheCodingBug/TCBFreshchatBotWidget)
 [![Version](https://img.shields.io/cocoapods/v/TCBFreshchatBotWidget.svg?style=flat)](https://cocoapods.org/pods/TCBFreshchatBotWidget)
 [![License](https://img.shields.io/cocoapods/l/TCBFreshchatBotWidget.svg?style=flat)](https://cocoapods.org/pods/TCBFreshchatBotWidget)
 [![Platform](https://img.shields.io/cocoapods/p/TCBFreshchatBotWidget.svg?style=flat)](https://cocoapods.org/pods/TCBFreshchatBotWidget)
@@ -23,11 +22,11 @@ pod 'TCBFreshchatBotWidget'
 
 ## Author
 
-Neil Francis Ramirez Hipona, nferocious76@gmail.com
+[Neil Francis Ramirez Hipona](https://github.com/nferocious76), nferocious76@gmail.com
 
 ## License
 
-TCBFreshchatBotWidget is available under the MIT license. See the LICENSE file for more info.
+TCBFreshchatBotWidget is available under the MIT license. See the [LICENSE](https://github.com/TheCodingBug/TCBFreshchatBotWidget/blob/main/LICENSE) file for more info.
+
 =======
 Freshchat Bot Web Widget for Freddy Self-service integration
->>>>>>> 9f1a1a798644dd8ac97f1f9f0b58073d8661346e
