@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0847F7CB26D746FC00CC0502 /* TCBFreshchatBotWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0847F7CA26D746FC00CC0502 /* TCBFreshchatBotWidget.swift */; };
+		0847F7CD26D7470E00CC0502 /* TCBFreshchatBotWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0847F7CC26D7470E00CC0502 /* TCBFreshchatBotWidgetView.swift */; };
 		15DFC51582E8503A389B4A0B4F38F41F /* Pods-TCBFreshchatBotWidget_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CCE3B4D231613DD9F8855B2711337C78 /* Pods-TCBFreshchatBotWidget_Tests-dummy.m */; };
 		27AB90D66241469313E64BADDEDEBD3D /* TCBFreshchatBotWidget-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D0C3C5AD518599C30584776EA65A038 /* TCBFreshchatBotWidget-dummy.m */; };
 		3316E390DDA211F1859C38782EC1A862 /* Pods-TCBFreshchatBotWidget_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0A76C0007DAB5A3EE625FD1698BFC65 /* Pods-TCBFreshchatBotWidget_Example-dummy.m */; };
@@ -38,27 +40,29 @@
 
 /* Begin PBXFileReference section */
 		05AFAF3488130760367A86136B63D9ED /* Pods-TCBFreshchatBotWidget_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCBFreshchatBotWidget_Tests-Info.plist"; sourceTree = "<group>"; };
+		0847F7CA26D746FC00CC0502 /* TCBFreshchatBotWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TCBFreshchatBotWidget.swift; path = TCBFreshchatBotWidget/Classes/TCBFreshchatBotWidget.swift; sourceTree = "<group>"; };
+		0847F7CC26D7470E00CC0502 /* TCBFreshchatBotWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TCBFreshchatBotWidgetView.swift; path = TCBFreshchatBotWidget/Classes/TCBFreshchatBotWidgetView.swift; sourceTree = "<group>"; };
 		0F9DABFB1696C65705BEDD6163B648B6 /* Pods-TCBFreshchatBotWidget_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TCBFreshchatBotWidget_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1F60CEBE89E13423164BEB8029CD1716 /* TCBFreshchatBotWidget-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TCBFreshchatBotWidget-Info.plist"; sourceTree = "<group>"; };
-		24FE34355634CC4B556AD375B3AC52EE /* TCBFreshchatBotWidget.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = TCBFreshchatBotWidget.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		24FE34355634CC4B556AD375B3AC52EE /* TCBFreshchatBotWidget.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = TCBFreshchatBotWidget.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		27AD32EDB7F98EE5A0AE1658A624D375 /* Pods-TCBFreshchatBotWidget_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TCBFreshchatBotWidget_Example.modulemap"; sourceTree = "<group>"; };
 		39AD0A8254508FC962429A3C4968C95E /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReplaceMe.swift; path = TCBFreshchatBotWidget/Classes/ReplaceMe.swift; sourceTree = "<group>"; };
-		6132134E3EFA4552EB497BE2C469F5BA /* Pods_TCBFreshchatBotWidget_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TCBFreshchatBotWidget_Tests.framework; path = "Pods-TCBFreshchatBotWidget_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		69CF92C4EEFFCE5DCCFAE6539595CB7F /* Pods_TCBFreshchatBotWidget_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TCBFreshchatBotWidget_Example.framework; path = "Pods-TCBFreshchatBotWidget_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6132134E3EFA4552EB497BE2C469F5BA /* Pods_TCBFreshchatBotWidget_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCBFreshchatBotWidget_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		69CF92C4EEFFCE5DCCFAE6539595CB7F /* Pods_TCBFreshchatBotWidget_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TCBFreshchatBotWidget_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A17D926A51A9C4FF0FFC92925C399F6 /* Pods-TCBFreshchatBotWidget_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCBFreshchatBotWidget_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7203EF5E7D6D4743B7E8E0EDB757FD96 /* Pods-TCBFreshchatBotWidget_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TCBFreshchatBotWidget_Example-frameworks.sh"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7ECFFEC2C28BA0345EB19FCD4F283EA6 /* Pods-TCBFreshchatBotWidget_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCBFreshchatBotWidget_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		869CED47F2682FF88533F3B1DE28415D /* Pods-TCBFreshchatBotWidget_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCBFreshchatBotWidget_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		8D0C3C5AD518599C30584776EA65A038 /* TCBFreshchatBotWidget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TCBFreshchatBotWidget-dummy.m"; sourceTree = "<group>"; };
-		9A631BDE41F27D08FD072C3694377A37 /* TCBFreshchatBotWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TCBFreshchatBotWidget.framework; path = TCBFreshchatBotWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A631BDE41F27D08FD072C3694377A37 /* TCBFreshchatBotWidget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TCBFreshchatBotWidget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D11AD1E2B52778BF2BE94091B19E5C3 /* Pods-TCBFreshchatBotWidget_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCBFreshchatBotWidget_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E30834755C4EA2B3751D343AC0907AF /* Pods-TCBFreshchatBotWidget_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TCBFreshchatBotWidget_Example-Info.plist"; sourceTree = "<group>"; };
-		A868914C3CA9C156B8F4785B5A79CD28 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A868914C3CA9C156B8F4785B5A79CD28 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B1E0CD6272201FE5EFA25D603A920B4D /* Pods-TCBFreshchatBotWidget_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TCBFreshchatBotWidget_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		B8D344210A4D510A67DB79BE33163835 /* Pods-TCBFreshchatBotWidget_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TCBFreshchatBotWidget_Tests.modulemap"; sourceTree = "<group>"; };
-		C29E8D4AEBBE9707DAEB9C393CD062A3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C29E8D4AEBBE9707DAEB9C393CD062A3 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		C344B8BEF3A4E42EB6271220BC343273 /* Pods-TCBFreshchatBotWidget_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCBFreshchatBotWidget_Example-umbrella.h"; sourceTree = "<group>"; };
 		C4981D5A753183626B780611A4AAB584 /* TCBFreshchatBotWidget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TCBFreshchatBotWidget.debug.xcconfig; sourceTree = "<group>"; };
 		C58391348D3D88424EE83DE03CBF9DDA /* Pods-TCBFreshchatBotWidget_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TCBFreshchatBotWidget_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				39AD0A8254508FC962429A3C4968C95E /* ReplaceMe.swift */,
+				0847F7CA26D746FC00CC0502 /* TCBFreshchatBotWidget.swift */,
+				0847F7CC26D7470E00CC0502 /* TCBFreshchatBotWidgetView.swift */,
 				494E888A0028F82C527853E58A0B0FB4 /* Pod */,
 				3C20B68B148335DAB99A4677B39B94EA /* Support Files */,
 			);
@@ -385,6 +391,8 @@
 			files = (
 				EAB29645B73584C839E2FBA8406A46D2 /* ReplaceMe.swift in Sources */,
 				27AB90D66241469313E64BADDEDEBD3D /* TCBFreshchatBotWidget-dummy.m in Sources */,
+				0847F7CB26D746FC00CC0502 /* TCBFreshchatBotWidget.swift in Sources */,
+				0847F7CD26D7470E00CC0502 /* TCBFreshchatBotWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -718,8 +726,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
