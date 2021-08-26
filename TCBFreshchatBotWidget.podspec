@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TCBFreshchatBotWidget'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = 'TCBFreshchatBotWidget is more than just a wrapper/helper widget for Freshchat Bot - Freddy Self-service integration.'
 
 # This description is used to generate tags and improve search results.
