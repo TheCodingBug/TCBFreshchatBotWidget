@@ -27,6 +27,3 @@ pod 'TCBFreshchatBotWidget'
 ## License
 
 TCBFreshchatBotWidget is available under the MIT license. See the [LICENSE](https://github.com/TheCodingBug/TCBFreshchatBotWidget/blob/main/LICENSE) file for more info.
-
-=======
-Freshchat Bot Web Widget for Freddy Self-service integration
