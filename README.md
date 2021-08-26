@@ -18,7 +18,7 @@ import TCBFreshchatBotWidget
 
 // set and call whenever needed
 let clientData: [String: Any] = ["name": "TCBFreshchatBotWidget User"]
-let widgetData = TCBFreshchatBotWidget(withClientHash: "d4980410f479d76eba5e00335eae38e8b04fd21e",
+let widgetData = TCBFreshchatBotWidget(clientHash: "d4980410f479d76eba5e00335eae38e8b04fd21e",
                                        botHash: "f90f6dfa4d478848d045c31ac0493f730c8368fd",
                                        showWidget: true,
                                        clientData: clientData)
